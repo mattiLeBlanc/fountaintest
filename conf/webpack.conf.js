@@ -51,7 +51,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html'),
+      template: conf.path.src('index.pug'),
       inject: true
     })
   ],
