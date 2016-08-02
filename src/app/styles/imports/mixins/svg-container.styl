@@ -1,0 +1,21 @@
+svg-container( height = 25px, width = 25px, fill-color = '', stroke-color = '', stroke-width = '' )
+
+  height                  height
+  width                   width
+  if fill-color
+    fill                  fill-color
+  if stroke-color
+    stroke                stroke-color
+  if stroke-width
+    stroke-width          stroke-width
+
+  use
+    if fill-color
+      fill                  fill-color
+    if stroke-color
+      stroke                stroke-color
+    if stroke-width
+      stroke-width          stroke-width
+
+  &.flip
+    transform             rotateZ(180deg)

@@ -1,0 +1,58 @@
+// Reset the box-sizing
+//
+*
+  box-sizing border-box
+*:before,
+*:after
+  box-sizing border-box
+
+html
+  default-font()
+
+html
+body
+  height        100%
+
+body
+
+  margin               0
+  // flexbox fix for Safari / iOS
+  [ui-view=header]
+    flex-shrink    0
+  [ui-view=container]
+    flex           1 0 auto
+  [ui-view=footer]
+    flex-shrink    0
+  // End flexbox fix for Safari / iOS
+
+
+
+.container
+
+  padding               0
+  margin-right          auto
+  margin-left           auto
+
+  +at(1)
+    margin              0
+    width               100%
+
+
+  +at(2)
+    width               100%
+    margin              0
+
+  +at(3)
+    // width               600px
+    width               720px
+    margin              0 auto
+
+  +at(4)
+    width               970px
+
+  +from-width(5)
+    width               1170px
+
+
+
+

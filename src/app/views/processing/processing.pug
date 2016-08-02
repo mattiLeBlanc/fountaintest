@@ -1,0 +1,11 @@
+div.processing.container
+
+
+  div(ng-if="vm.loading")
+    h3 PROCESSING
+
+  div(ng-if="!vm.loading")
+    h3 Outcome
+    div(ng-if="vm.cd.preQual.declined") Decline
+      pre-qual-rule(ng-repeat="rule in vm.cd.preQual.rules")
+
