@@ -40,7 +40,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html'),
+      template: conf.path.src('index.pug'),
       inject: true
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -68,8 +68,7 @@ module.exports = {
   },
   entry: {
     app: [
-      `./${conf.path.src('index')}`,
-      `./${conf.path.tmp('templateCacheHtml.ts')}`
+      `./${conf.path.src('index')}`
     ]
   },
   ts: {
